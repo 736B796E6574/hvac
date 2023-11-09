@@ -1,14 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,200;8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800;8..60,900&display=swap");
 
+/* Table of contents */
+
+/* Nav section */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* nav section */
+
+/* info bar */
 .nav__information-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #fafafa;
   color: rgb(20, 22, 46);
@@ -87,4 +94,65 @@
     justify-content: center; /* Center horizontally */
     align-items: center;
   }
+}
+
+/* Start of desktop nav menu end of info bar */
+
+.nav__menu-large {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  background-color: #fafafa;
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+  font-size: 1rem;
+  color: #162029;
+  font-family: "Source Serif 4", serif;
+  font-weight: 400;
+  margin-left: 400px;
+}
+
+.nav__link {
+  padding: 10px;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  color: #07427c;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo i {
+  color: rgb(38, 72, 101);
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.nav__search {
+  display: flex;
+  align-items: center;
+}
+
+.nav__background-container {
+  background-image: url("https://images.pexels.com/photos/11718060/pexels-photo-11718060.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-size: cover;
+  background-position: center;
+  height: 500px; /* Adjust this height as needed */
+  position: relative;
+}
+
+.nav__menu-large {
+  position: absolute;
+  top: 0; /* Position at the top of the background container initially */
+  left: 0;
+  right: 0;
+  z-index: 100; /* Ensure the nav appears above the content */
+  transition: top 0.3s ease; /* Add smooth transition */
+  background-color: transparent;
 }
