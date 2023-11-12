@@ -20,6 +20,9 @@
   background-color: #fafafa;
   color: rgb(20, 22, 46);
   flex-wrap: wrap;
+  box-shadow: 0px 3px 5px 0px rgba(21,48,119,0.75);
+-webkit-box-shadow: 0px 3px 5px 0px rgba(21,48,119,0.75);
+-moz-box-shadow: 0px 3px 5px 0px rgba(21,48,119,0.75);
 }
 
 .nav__facebook-icon {
@@ -155,6 +158,28 @@
   background-position: center;
   height: 500px; /* Adjust this height as needed */
   position: relative;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in-out forwards;
+  top: 0;
+  left: 0;
+}
+
+.nav__background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(250, 250, 250, 0.4); /* #fafafa with 50% opacity */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .nav__menu-large {
@@ -165,6 +190,53 @@
   z-index: 100; /* Ensure the nav appears above the content */
   transition: top 0.3s ease; /* Add smooth transition */
   background-color: transparent;
+}
+
+.nav__hero-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.nav__hero-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.nav__hero-items {
+  margin-right: 10%;
+  margin-bottom: 5%;
+  width: 30%;
+}
+
+.nav__hero-items h1 {
+  font-size: 2.5rem;
+  color: #07427c;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.nav__hero-items span {
+  color: #a13f3f;
+}
+
+.nav__hero-items p {
+  color: #04051b;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 /* hero section */
